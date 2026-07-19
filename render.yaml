@@ -1,0 +1,6 @@
+services:
+  - type: static
+    name: codexa
+    env: static
+    buildCommand: ""
+    publishDir: "."
