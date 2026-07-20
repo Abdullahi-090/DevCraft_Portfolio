@@ -1,37 +1,67 @@
-// Mobile Menu Navigation Toggle
+// Mobile Navbar Toggle
 const mobileMenu = document.getElementById('mobile-menu');
 const navMenu = document.querySelector('.nav-menu');
 
 mobileMenu.addEventListener('click', () => {
     navMenu.classList.toggle('active');
-    mobileMenu.classList.toggle('toggle-active');
 });
 
-// Close mobile menu when a link is clicked
 document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-    });
+    link.addEventListener('click', () => navMenu.classList.remove('active'));
 });
 
-// Dynamic Active Link Highlighting while scrolling
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.nav-link');
+// Typewriter Effect for DevCraft Terminal
+const textToType = "// DevCraft: Deploying tailored digital experiences...";
+const typedTextElement = document.getElementById('typed-text');
+let index = 0;
 
-window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
-            current = section.getAttribute('id');
+function typeWriter() {
+    if (index < textToType.length) {
+        typedTextElement.textContent += textToType.charAt(index);
+        index++;
+        setTimeout(typeWriter, 50);
+    }
+}
+
+window.addEventListener('DOMContentLoaded', typeWriter);
+
+// Paystack Integration for DevCraft
+function payWithPaystack() {
+    let handler = PaystackPop.setup({
+        key: 'pk_test_xxxxxxxxxxxxxxxxxxxxxxxx', // Replace with your Public Paystack Key
+        email: 'abdullahibashirgov@gmail.com',
+        amount: 500000, // Amount in kobo (5000 NGN)
+        currency: "NGN",
+        ref: '' + Math.floor((Math.random() * 1000000000) + 1),
+        onClose: function() {
+            alert('Donation window closed.');
+        },
+        callback: function(response) {
+            alert('Thank you for supporting DevCraft! Ref: ' + response.reference);
         }
     });
+    handler.openIframe();
+}
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-            link.classList.add('active');
-        }
+// Intersection Observer for Smooth Scroll Reveal Animations
+document.addEventListener('DOMContentLoaded', () => {
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target); // Animate once
+            }
+        });
+    }, observerOptions);
+
+    // Target elements to animate
+    document.querySelectorAll('.scroll-reveal, .serve-card').forEach(el => {
+        el.classList.add('scroll-reveal');
+        revealObserver.observe(el);
     });
 });
