@@ -25,7 +25,7 @@ const subtitleText = "We build clean, modern, and high-performance websites tail
 
 const codeText = `class DevCraft_Studio {
   mission = "Scalable & High-Performance";
-  coreTech = ["React", "Node", "HTML5", "CSS3", "JavaScript", "React", "Node.js", "Python", "Responsive Design"];
+  coreTech = ["HTML5", "CSS3", "JavaScript", "Node.js", "React", "Python", "Responsive Design"];
 
   public deployNextGen() {
     return "Custom & secure web platforms";
