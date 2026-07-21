@@ -635,3 +635,206 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ==========================================
+   MOBILE RESPONSIVE & LAYOUT FIXES
+   ========================================== */
+
+/* Universal Box Sizing & Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Prevents side scrolling */
+}
+
+/* Base Card Styling with Clear Borders */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.contact-info {
+    padding: 30px 24px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Cursor Animation for Typing Effect */
+.cursor {
+    animation: blink 0.8s infinite;
+    color: var(--cyan);
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ==========================================
+   PHONE SCREEN FIXES (max-width: 768px)
+   ========================================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 16px !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* Hero Section Fixes */
+    .hero-section {
+        padding: 100px 16px 40px 16px !important;
+        min-height: auto;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .hero-description {
+        font-size: 0.95rem !important;
+        min-height: 50px; /* Prevents layout shift during typing */
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Code Terminal Mobile Display Fix */
+    .code-terminal {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .terminal-body {
+        font-size: 0.75rem !important;
+        padding: 12px !important;
+        overflow-x: auto;
+        white-space: pre-wrap; /* Wraps long lines on mobile */
+        word-break: break-word;
+    }
+
+    /* Contact Section Fixes (Fixes image_c80476.png borders & overflow) */
+    .dual-contact-wrapper {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        width: 100%;
+        padding: 0 4px;
+        box-sizing: border-box;
+    }
+
+    .section-title {
+        font-size: 1.8rem !important;
+        word-wrap: break-word;
+    }
+
+    .contact-card-title {
+        font-size: 1.2rem !important;
+    }
+
+    .contact-info {
+        padding: 20px 16px !important;
+    }
+
+    .contact-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .action-btn {
+        width: 100%;
+    }
+
+    .info-item {
+        word-break: break-all; /* Ensures long email addresses don't break borders */
+    }
+}
+
+/* Prevent horizontal overflow completely */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure mobile text wraps naturally */
+.hero-description {
+    white-space: normal !important;
+    word-break: break-word;
+    max-width: 100%;
+    display: inline-block;
+}
+
+.hero-title {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    word-break: break-word;
+}
+
+/* Prevent horizontal screen scroll on mobile devices */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Fix terminal text and code box overflow */
+.code-terminal pre,
+.code-terminal code {
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+}
+
+/* Scale contact cards properly on mobile screens */
+.dual-contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .dual-contact-wrapper {
+        flex-direction: row;
+    }
+}
+
+/* ==========================================
+   ZOOM-UP SCROLL ANIMATION
+   ========================================== */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px) scale(0.94);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
