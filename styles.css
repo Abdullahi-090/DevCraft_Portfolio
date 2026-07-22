@@ -72,7 +72,7 @@ body {
 
 .nav-menu {
     display: flex;
-    gap: 20px;
+    gap: 18px;
 }
 
 .nav-link {
@@ -307,22 +307,33 @@ body {
 }
 
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
+    width: 100%;
 }
 
+/* Portfolio Card: Centered content with padding so text never touches borders */
 .portfolio-card {
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex: 1 1 320px;
+    max-width: 380px;
+    box-sizing: border-box;
+    padding: 28px 22px; /* Inner breathing room */
+    text-align: center;
+}
+
+.portfolio-card h3 {
+    text-align: center;
+    margin-top: 10px;
 }
 
 .portfolio-desc {
     color: var(--text-muted);
     font-size: 0.9rem;
-    margin: 10px 0 20px 0;
+    margin: 12px 0 20px 0;
+    text-align: center;
+    line-height: 1.6;
 }
 
 .portfolio-img-placeholder {
@@ -357,7 +368,6 @@ body {
     gap: 6px;
 }
 
-/* Dynamic Status Badges */
 .badge-online {
     background: rgba(16, 185, 129, 0.12);
     border: 1px solid rgba(16, 185, 129, 0.4);
@@ -400,8 +410,97 @@ body {
     cursor: not-allowed;
 }
 
+/* ==========================================
+   ADVERTISEMENT SECTION
+   ========================================== */
+.ad-section {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.ad-tag {
+    color: var(--cyan);
+    background: rgba(6, 182, 212, 0.12);
+    border-color: rgba(6, 182, 212, 0.3);
+}
+
+.ad-intro {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: -25px;
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+.ad-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.ad-card {
+    padding: 30px 24px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.ad-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(6, 182, 212, 0.4);
+}
+
+.ad-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: rgba(6, 182, 212, 0.15);
+    color: var(--cyan);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+.ad-icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(139, 92, 246, 0.12);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--purple);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.ad-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.ad-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.ad-btn {
+    width: 100%;
+    margin-top: auto;
+}
+
 /* Contact Dual Section */
-.contact-section { background-color: var(--bg-secondary); }
+.contact-section { background-color: var(--bg-primary); }
 
 .dual-contact-wrapper {
     display: grid;
@@ -476,6 +575,155 @@ body {
     margin-bottom: 4px;
     color: var(--text-main);
     font-size: 0.88rem;
+}
+
+/* ==========================================
+   FUNDING SECTION
+   ========================================== */
+.funding-section {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--glass-border);
+}
+
+.funding-card {
+    padding: 40px 30px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.funding-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.funding-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.funding-amount {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+/* Progress Bar Container */
+.funding-progress-wrapper {
+    margin-bottom: 35px;
+}
+
+.funding-progress-bar {
+    width: 100%;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    padding: 3px;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.progress-segment {
+    height: 100%;
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+}
+
+.segment-green {
+    background: linear-gradient(90deg, #10b981, #22c55e);
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
+}
+
+.segment-orange {
+    background: linear-gradient(90deg, #f97316, #fb923c);
+    box-shadow: 0 0 12px rgba(249, 115, 22, 0.4);
+    margin-left: 3px;
+}
+
+.segment-text {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #000;
+    white-space: nowrap;
+    padding: 0 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 10px;
+    padding: 0 4px;
+}
+
+/* Donors List */
+.donors-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 25px;
+}
+
+.donors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.donor-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.donor-color-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.green-dot {
+    background-color: #22c55e;
+    box-shadow: 0 0 8px #22c55e;
+}
+
+.orange-dot {
+    background-color: #f97316;
+    box-shadow: 0 0 8px #f97316;
+}
+
+.donor-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.donor-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.donor-amount {
+    font-size: 0.8rem;
+    color: var(--text-muted);
 }
 
 footer {
@@ -636,10 +884,6 @@ footer {
     transform: translateY(0);
 }
 
-/* ==========================================
-   MOBILE RESPONSIVE & LAYOUT FIXES
-   ========================================== */
-
 /* Universal Box Sizing & Reset */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -648,10 +892,9 @@ footer {
 html, body {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden; /* Prevents side scrolling */
+    overflow-x: hidden;
 }
 
-/* Base Card Styling with Clear Borders */
 .glass {
     background: var(--glass-bg);
     backdrop-filter: var(--glass-blur);
@@ -670,22 +913,7 @@ html, body {
     overflow: hidden;
 }
 
-/* Cursor Animation for Typing Effect */
-.cursor {
-    animation: blink 0.8s infinite;
-    color: var(--cyan);
-    font-weight: bold;
-    margin-left: 2px;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-/* ==========================================
-   PHONE SCREEN FIXES (max-width: 768px)
-   ========================================== */
+/* Phone Screen Fixes */
 @media (max-width: 768px) {
     .container {
         padding: 40px 16px !important;
@@ -693,7 +921,6 @@ html, body {
         box-sizing: border-box;
     }
 
-    /* Hero Section Fixes */
     .hero-section {
         padding: 100px 16px 40px 16px !important;
         min-height: auto;
@@ -712,7 +939,7 @@ html, body {
 
     .hero-description {
         font-size: 0.95rem !important;
-        min-height: 50px; /* Prevents layout shift during typing */
+        min-height: 50px;
     }
 
     .hero-buttons {
@@ -725,7 +952,6 @@ html, body {
         text-align: center;
     }
 
-    /* Code Terminal Mobile Display Fix */
     .code-terminal {
         width: 100%;
         box-sizing: border-box;
@@ -735,11 +961,10 @@ html, body {
         font-size: 0.75rem !important;
         padding: 12px !important;
         overflow-x: auto;
-        white-space: pre-wrap; /* Wraps long lines on mobile */
+        white-space: pre-wrap;
         word-break: break-word;
     }
 
-    /* Contact Section Fixes (Fixes image_c80476.png borders & overflow) */
     .dual-contact-wrapper {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
@@ -771,70 +996,221 @@ html, body {
     }
 
     .info-item {
-        word-break: break-all; /* Ensures long email addresses don't break borders */
+        word-break: break-all;
+    }
+
+    .funding-card {
+        padding: 25px 16px;
+    }
+
+    .funding-header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
-/* Prevent horizontal overflow completely */
-html, body {
+/* Image Container */
+.portfolio-img-box {
     width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-/* Ensure mobile text wraps naturally */
-.hero-description {
-    white-space: normal !important;
-    word-break: break-word;
-    max-width: 100%;
-    display: inline-block;
-}
-
-.hero-title {
-    font-size: 2rem !important;
-    line-height: 1.2 !important;
-    word-break: break-word;
-}
-
-/* Prevent horizontal screen scroll on mobile devices */
-html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-/* Fix terminal text and code box overflow */
-.code-terminal pre,
-.code-terminal code {
-    white-space: pre-wrap !important;
-    word-break: break-word !important;
-}
-
-/* Scale contact cards properly on mobile screens */
-.dual-contact-wrapper {
+    max-height: 240px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 18px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 
+                0 0 15px rgba(0, 240, 255, 0.15);
 }
 
-@media (min-width: 768px) {
-    .dual-contact-wrapper {
-        flex-direction: row;
-    }
+.project-img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: contain;
+    filter: brightness(1.35) contrast(1.15) saturate(1.2);
+    image-rendering: -webkit-optimize-contrast;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.portfolio-card:hover .project-img {
+    transform: scale(1.04);
+    filter: brightness(1.45) contrast(1.2) saturate(1.25);
+}
+
+/* Color Variants for Progress Bar Segments */
+.bg-green  { background: linear-gradient(90deg, #10b981, #22c55e); box-shadow: 0 0 10px rgba(34, 197, 94, 0.4); }
+.bg-orange { background: linear-gradient(90deg, #f97316, #fb923c); box-shadow: 0 0 10px rgba(249, 115, 22, 0.4); }
+.bg-blue   { background: linear-gradient(90deg, #3b82f6, #60a5fa); box-shadow: 0 0 10px rgba(59, 130, 246, 0.4); }
+.bg-purple { background: linear-gradient(90deg, #8b5cf6, #a78bfa); box-shadow: 0 0 10px rgba(139, 92, 246, 0.4); }
+.bg-cyan   { background: linear-gradient(90deg, #06b6d4, #22d3ee); box-shadow: 0 0 10px rgba(6, 182, 212, 0.4); }
+.bg-yellow { background: linear-gradient(90deg, #eab308, #fde047); box-shadow: 0 0 10px rgba(234, 179, 8, 0.4); }
+
+/* Color Dots for Donor Cards */
+.green-dot  { background-color: #22c55e; box-shadow: 0 0 8px #22c55e; }
+.orange-dot { background-color: #f97316; box-shadow: 0 0 8px #f97316; }
+.blue-dot   { background-color: #3b82f6; box-shadow: 0 0 8px #3b82f6; }
+.purple-dot { background-color: #8b5cf6; box-shadow: 0 0 8px #8b5cf6; }
+.cyan-dot   { background-color: #06b6d4; box-shadow: 0 0 8px #06b6d4; }
+.yellow-dot { background-color: #eab308; box-shadow: 0 0 8px #eab308; }
+
+.no-donors-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-style: italic;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 10px 0;
 }
 
 /* ==========================================
-   ZOOM-UP SCROLL ANIMATION
+   COMMUNITY FUNDING & DONOR STYLES
    ========================================== */
-.scroll-reveal {
-    opacity: 0;
-    transform: translateY(40px) scale(0.94);
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: transform, opacity;
+.funding-section {
+    background-color: var(--bg-secondary);
 }
 
-.scroll-reveal.active {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+.funding-card {
+    padding: 35px;
+    max-width: 800px;
+    margin: 0 auto;
 }
+
+.funding-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.funding-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.funding-amount {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.funding-progress-wrapper {
+    margin-bottom: 35px;
+}
+
+.funding-progress-bar {
+    height: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+
+.progress-segment {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.5s ease;
+}
+
+.segment-text {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    padding: 0 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.donors-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 10px;
+}
+
+.donors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.donor-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.donor-color-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.donor-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.donor-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.donor-amount {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.no-donors-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-style: italic;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* --- COLOR VARIANTS FOR PROGRESS BAR SEGMENTS --- */
+.bg-red    { background: linear-gradient(90deg, #ef4444, #f87171); box-shadow: 0 0 10px rgba(239, 68, 68, 0.5); }
+.bg-green  { background: linear-gradient(90deg, #10b981, #22c55e); box-shadow: 0 0 10px rgba(34, 197, 94, 0.5); }
+.bg-orange { background: linear-gradient(90deg, #f97316, #fb923c); box-shadow: 0 0 10px rgba(249, 115, 22, 0.5); }
+.bg-blue   { background: linear-gradient(90deg, #3b82f6, #60a5fa); box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); }
+.bg-purple { background: linear-gradient(90deg, #8b5cf6, #a78bfa); box-shadow: 0 0 10px rgba(139, 92, 246, 0.5); }
+.bg-cyan   { background: linear-gradient(90deg, #06b6d4, #22d3ee); box-shadow: 0 0 10px rgba(6, 182, 212, 0.5); }
+.bg-yellow { background: linear-gradient(90deg, #eab308, #fde047); box-shadow: 0 0 10px rgba(234, 179, 8, 0.5); }
+.bg-pink   { background: linear-gradient(90deg, #ec4899, #f472b6); box-shadow: 0 0 10px rgba(236, 72, 153, 0.5); }
+
+/* --- COLOR DOTS FOR DONOR LIST CARDS --- */
+.red-dot    { background-color: #ef4444; box-shadow: 0 0 8px #ef4444; }
+.green-dot  { background-color: #22c55e; box-shadow: 0 0 8px #22c55e; }
+.orange-dot { background-color: #f97316; box-shadow: 0 0 8px #f97316; }
+.blue-dot   { background-color: #3b82f6; box-shadow: 0 0 8px #3b82f6; }
+.purple-dot { background-color: #8b5cf6; box-shadow: 0 0 8px #8b5cf6; }
+.cyan-dot   { background-color: #06b6d4; box-shadow: 0 0 8px #06b6d4; }
+.yellow-dot { background-color: #eab308; box-shadow: 0 0 8px #eab308; }
+.pink-dot   { background-color: #ec4899; box-shadow: 0 0 8px #ec4899; }
