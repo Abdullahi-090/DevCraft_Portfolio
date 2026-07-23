@@ -101,3 +101,23 @@ function payWithPaystack() {
     });
     handler.openIframe();
 }
+
+// ==========================================
+// AUTOMATIC IMAGE SLIDESHOW
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const carousels = document.querySelectorAll('.portfolio-img-box.carousel');
+
+    carousels.forEach(carousel => {
+        const slides = carousel.querySelectorAll('.slide');
+        if (slides.length <= 1) return; // Skip if only 1 image
+
+        let currentIndex = 0;
+
+        setInterval(() => {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].classList.add('active');
+        }, 3500); // Change image every 3.5 seconds
+    });
+});
