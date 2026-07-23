@@ -19,43 +19,37 @@ document.querySelectorAll('.nav-link').forEach(link => {
 });
 
 // ==========================================
-// 2. TYPEWRITER ANIMATION
+// 2. TYPEWRITER ANIMATION (devcraft_engine.ts)
 // ==========================================
 const subtitleText = "We build clean, modern, and high-performance websites tailored specifically to elevate your business and grow your brand.";
 
-const codeText = `class DevCraft_Studio {
-  mission = "Scalable & High-Performance";
-  coreTech = ["HTML5", "CSS3", "JavaScript", "Node.js", "React", "Python", "Responsive Design"];
+const codeText = "class DevCraftEngine {\n  deploy() {\n    return \"Deployment Successful\";\n  }\n}\n\nconst app = new DevCraftEngine();\napp.deploy();";
 
-  public deployNextGen() {
-    return "Custom & secure web platforms";
-  }
-}`;
+function startTypewriter(elementId, fullText, speed, isCode = false) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
 
-function startTyping(elementId, fullText, speed, onComplete) {
-    const targetElement = document.getElementById(elementId);
-    if (!targetElement) return;
+    let index = 0;
+    el.textContent = "";
 
-    let charIndex = 0;
-    targetElement.textContent = "";
-
-    function typeChar() {
-        if (charIndex < fullText.length) {
-            targetElement.textContent += fullText.charAt(charIndex);
-            charIndex++;
-            setTimeout(typeChar, speed);
-        } else if (onComplete) {
-            onComplete();
+    const interval = setInterval(() => {
+        if (index < fullText.length) {
+            el.textContent += fullText.charAt(index);
+            index++;
+        } else {
+            clearInterval(interval);
+            // Apply colors using innerHTML AFTER typing finishes
+            if (isCode) {
+                el.innerHTML = highlightSyntax(fullText);
+            }
         }
-    }
-
-    typeChar();
+    }, speed);
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    startTyping('typed-subtitle', subtitleText, 25, () => {
-        startTyping('typed-code', codeText, 20);
-    });
+// Start both typewriters simultaneously
+window.addEventListener('load', () => {
+    startTypewriter('typed-subtitle', subtitleText, 25, false);
+    startTypewriter('typed-code', codeText, 20, true);
 });
 
 // ==========================================
@@ -76,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Attach animation observer to all cards, titles, and sections
     document.querySelectorAll('.scroll-reveal').forEach(el => {
         revealObserver.observe(el);
     });
@@ -103,14 +96,14 @@ function payWithPaystack() {
 }
 
 // ==========================================
-// AUTOMATIC IMAGE SLIDESHOW
+// 5. AUTOMATIC IMAGE SLIDESHOW
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
     const carousels = document.querySelectorAll('.portfolio-img-box.carousel');
 
     carousels.forEach(carousel => {
         const slides = carousel.querySelectorAll('.slide');
-        if (slides.length <= 1) return; // Skip if only 1 image
+        if (slides.length <= 1) return;
 
         let currentIndex = 0;
 
@@ -118,6 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
             slides[currentIndex].classList.remove('active');
             currentIndex = (currentIndex + 1) % slides.length;
             slides[currentIndex].classList.add('active');
-        }, 3500); // Change image every 3.5 seconds
+        }, 3500);
     });
 });

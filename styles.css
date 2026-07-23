@@ -1295,3 +1295,33 @@ html, body {
     position: relative; /* Keeps container structure */
     opacity: 1;
 }
+
+/* --- TERMINAL & CODE STYLES --- */
+.tok-keyword { color: #f472b6; font-weight: 600; } /* Pink (class, return, const, new) */
+.tok-class   { color: #fde047; }                   /* Yellow (DevCraftEngine) */
+.tok-string  { color: #a7f3d0; }                   /* Mint Green ("Deployment Successful") */
+.tok-func    { color: #60a5fa; }                   /* Blue (deploy) */
+
+#typed-code {
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.code-window {
+    height: 230px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.code-window pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+#typewriter-code {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
