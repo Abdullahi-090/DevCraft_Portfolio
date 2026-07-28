@@ -1,0 +1,59 @@
+    <!--<section id="ynh-projects" class="portfolio-section ynh-bg">
+        <div class="container">
+            <div class="partner-badge-header scroll-reveal">
+                <span class="partner-tag"><i class="fas fa-handshake"></i> Featured Partner Showcase</span>
+            </div>
+            <h2 class="section-title scroll-reveal">Projects by YNH</h2>
+            <div class="portfolio-grid">
+                
+                <div class="portfolio-card glass scroll-reveal">
+                    <div class="portfolio-img-box">
+                        <img src="studybuddy-preview.png" alt="StudyBuddy AI Homepage Preview" class="project-img">
+                    </div>
+
+                    <h3>StudyBuddy AI</h3>
+                    <p class="portfolio-desc">AI-powered learning platform that generates instant quizzes, interactive flashcards, and step-by-step study assistance for students.</p>
+                    <div class="card-footer-box">
+                        <span class="badge badge-online"><i class="fas fa-circle-dot"></i> Online</span>
+                        <a href="https://studybuddy-e1fk.onrender.com" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> -->
+
+
+
+
+
+                <div class="donors-grid">
+
+                    <!-- <div class="donor-card">
+                        <div class="donor-color-dot green-dot"></div>
+                        <div class="donor-info">
+                            <span class="donor-name">Sponsor Name</span>
+                            <span class="donor-amount">₦Amount contributed</span>
+                        </div>
+                    </div> -->
+                    
+                    <p class="no-donors-text" id="no-donors-msg">Be the first to support this campaign!</p>
+
+                </div>
+
+
+
+                <div class="funding-progress-wrapper">
+
+                    <div class="funding-progress-bar">
+                        <!-- <div class="progress-segment bg-green" style="width: %;">
+                            <span class="segment-text">Sponsor Name (%)</span>
+                        </div> -->
+                    </div>
+
+                    <div class="progress-labels">
+                        <span>₦0</span>
+                        <span>₦10,000</span>
+                        <span>₦20,000 Goal</span>
+                    </div>
+                </div>

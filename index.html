@@ -13,7 +13,9 @@
 
     <header class="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">DevCraft</a>
+            <a href="#home" class="logo">
+                <img src="logo.png" alt="DevCraft Logo" class="logo-img">
+            </a>
             <button class="menu-toggle" id="mobile-menu" aria-label="Toggle Menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -26,7 +28,6 @@
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#tech" class="nav-link">Tech Stack</a>
                 <a href="#our-projects" class="nav-link">Our Projects</a>
-                <!--<a href="#ynh-projects" class="nav-link">Projects by YNH</a> -->
                 <a href="#advertisement" class="nav-link">Ads</a>
                 <a href="#contact" class="nav-link">Contact</a>
                 <a href="#funding" class="nav-link">Funding</a>
@@ -34,431 +35,448 @@
         </div>
     </header>
 
-    <section id="home" class="hero-section">
-        <div class="hero-container">
-            <div class="hero-text-col">
-                <div class="status-pill fade-in">
-                    <span class="status-dot"></span> Online and Ready to Serve you
-                </div>
-                <h1 class="hero-title fade-in">
-                    Crafting <span class="text-cyan">Digital</span> <br>
-                    <span class="text-purple">Artistry</span> Through Code.
-                </h1>
-                
-                <p class="hero-description fade-in">
-                    <span id="typed-subtitle"></span><span class="cursor">|</span>
-                </p>
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-text-col">
+                    <div class="status-pill fade-in">
+                        <span class="status-dot"></span> Online and Ready to Serve you
+                    </div>
+                    <h1 class="hero-title fade-in">
+                        Crafting <span class="text-cyan">Digital</span> <br>
+                        <span class="text-purple">Artistry</span> Through Code.
+                    </h1>
+                    
+                    <p class="hero-description fade-in">
+                        <span id="typed-subtitle"></span><span class="cursor">|</span>
+                    </p>
 
-                <div class="hero-buttons fade-in">
-                    <a href="#our-projects" class="btn btn-gradient">Explore Our Work <i class="fas fa-arrow-down-long"></i></a>
-                    <a href="#contact" class="btn btn-secondary">Schedule Call</a>
+                    <div class="hero-buttons fade-in">
+                        <a href="#our-projects" class="btn btn-gradient">Explore Our Work <i class="fas fa-arrow-down-long"></i></a>
+                        <a href="#contact" class="btn btn-secondary">Schedule Call</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="hero-code-col fade-in">
-                <div class="code-terminal glass">
-                    <div class="terminal-header">
-                        <div class="terminal-dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
+                <div class="hero-code-col fade-in">
+                    <div class="code-terminal glass">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="terminal-title">devcraft_engine.ts</span>
                         </div>
-                        <span class="terminal-title">devcraft_engine.ts</span>
-                    </div>
-                    <div class="terminal-body">
-                        <pre><code id="typed-code"></code><span class="cursor">|</span></pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title reveal-text">About <span class="text-cyan">DevCraft</span></h2>
-            
-            <div class="about-card glass scroll-reveal">
-                <div class="about-header-badge">
-                    <i class="fas fa-sparkles"></i> Who We Are
-                </div>
-                <p class="lead-text">
-                    At <strong class="highlight-text">DevCraft</strong>, we transform your ideas into modern, high-performance websites and custom web applications.
-                </p>
-                <p>
-                    Our goal is simple: help businesses, startups, and individuals build a strong, secure, and reliable online presence. We create websites that do more than just look good—they serve as powerful tools to showcase your brand, attract customers, and drive growth.
-                </p>
-
-                <div class="about-stats-grid">
-                    <div class="stat-box">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Custom Architecture</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-number">Lightning</span>
-                        <span class="stat-label">Fast Performance</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-number">24/7</span>
-                        <span class="stat-label">Scalable Reliability</span>
+                        <div class="terminal-body">
+                            <pre><code id="typed-code"></code><span class="cursor">|</span></pre>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="who-we-serve" class="services-section">
-        <div class="container">
-            <h2 class="section-title reveal-text">Who We <span class="text-purple">Serve</span></h2>
-            
-            <div class="about-card glass scroll-reveal" style="margin-bottom: 40px; text-align: center;">
-                <p class="lead-text">
-                    DevCraft is committed to helping <span class="text-cyan">small and growing organizations</span> establish a strong digital presence through thoughtfully designed, high-performance websites.
-                </p>
-                <p style="margin-bottom: 0;">
-                    By focusing closely on our clients, we provide personalized attention, practical technical solutions, and bespoke platforms tailored specifically to individual business goals.
-                </p>
-            </div>
-
-            <h3 class="subsection-title scroll-reveal">We Primarily Work With:</h3>
-            
-            <div class="serve-cards-grid">
-                <div class="serve-card glass scroll-reveal">
-                    <div class="serve-icon-wrapper"><i class="fas fa-store"></i></div>
-                    <h4>Small Businesses</h4>
-                    <p>Custom web platforms to establish digital authority and reach local customers.</p>
-                </div>
-                <div class="serve-card glass scroll-reveal">
-                    <div class="serve-icon-wrapper"><i class="fas fa-utensils"></i></div>
-                    <h4>Restaurants & Cafés</h4>
-                    <p>Digital menus, online booking systems, and sleek interactive storefronts.</p>
-                </div>
-                <div class="serve-card glass scroll-reveal">
-                    <div class="serve-icon-wrapper"><i class="fas fa-building"></i></div>
-                    <h4>Real Estate Agents</h4>
-                    <p>Interactive property listings, virtual tours, and client lead generation portals.</p>
-                </div>
-                <div class="serve-card glass scroll-reveal">
-                    <div class="serve-icon-wrapper"><i class="fas fa-user-tie"></i></div>
-                    <h4>Personal Brands</h4>
-                    <p>High-converting portfolio platforms for creators, speakers, and professionals.</p>
-                </div>
-                <div class="serve-card glass scroll-reveal">
-                    <div class="serve-icon-wrapper"><i class="fas fa-shop"></i></div>
-                    <h4>Local Shops</h4>
-                    <p>E-commerce ordering channels built to transition retail shops into the modern web.</p>
-                </div>
-                <div class="serve-card glass scroll-reveal">
-                    <div class="serve-icon-wrapper"><i class="fas fa-briefcase"></i></div>
-                    <h4>Service Businesses</h4>
-                    <p>Appointment booking engines, client management systems, and service portals.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="about-section">
-        <div class="container">
-            <h2 class="section-title scroll-reveal">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card glass scroll-reveal">
-                    <i class="fas fa-code service-icon"></i>
-                    <h3>Custom Web Development</h3>
-                    <p>Tailored front-to-back development designed exactly around your unique business requirements.</p>
-                </div>
-                <div class="service-card glass scroll-reveal">
-                    <i class="fas fa-laptop service-icon"></i>
-                    <h3>Business Websites</h3>
-                    <p>Corporate portals, landing pages, and commercial platforms built to scale and convert visitors.</p>
-                </div>
-                <div class="service-card glass scroll-reveal">
-                    <i class="fas fa-layer-group service-icon"></i>
-                    <h3>Web Applications</h3>
-                    <p>Interactive dashboard modules, school management systems, and specialized portal solutions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="tech" class="tech-section">
-        <div class="container">
-            <h2 class="section-title scroll-reveal">Tech Stack</h2>
-            <div class="tech-grid scroll-reveal">
-                <div class="tech-badge">HTML5</div>
-                <div class="tech-badge">CSS3</div>
-                <div class="tech-badge">JavaScript</div>
-                <div class="tech-badge">React</div>
-                <div class="tech-badge">Node.js</div>
-                <div class="tech-badge">Python</div>
-                <div class="tech-badge">Responsive Design</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="our-projects" class="portfolio-section">
-        <div class="container">
-            <h2 class="section-title scroll-reveal">Our Projects</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-card glass scroll-reveal">
-                    <div class="portfolio-img-box">
-                        <img src="neomuseum-preview.png" alt="StudyBuddy AI Homepage Preview" class="project-img">
-                    </div>
-
-                    <h3>NeoMuseum</h3>
-                    <p class="portfolio-desc">NeoMuseum is an immersive digital space for art and education. Explore interactive virtual exhibits, share your own creations, and connect with a worldwide creative community.</p>
-                    <div class="card-footer-box">
-                        <span class="badge badge-online"><i class="fas fa-circle-dot"></i> Online</span>
-                        <a href="https://neomuseum.onrender.com" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fas fa-external-link-alt"></i> Visit Site</a>
-                    </div>
-                </div>
-                <div class="portfolio-card glass scroll-reveal">
-                    <div class="portfolio-img-box">
-                        <img src="studybuddy-preview.png" alt="StudyBuddy AI Homepage Preview" class="project-img">
-                    </div>
-
-                    <h3>StudyBuddy AI</h3>
-                    <p class="portfolio-desc">The ultimate AI study companion. Upload your notes to get instant practice quizzes, smart flashcards, and clear, step-by-step homework help exactly when you need it.</p>
-                    <div class="card-footer-box">
-                        <span class="badge badge-online"><i class="fas fa-circle-dot"></i> Online</span>
-                        <a href="https://studybuddy-e1fk.onrender.com" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fas fa-external-link-alt"></i> Visit Site</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--<section id="ynh-projects" class="portfolio-section ynh-bg">
-        <div class="container">
-            <div class="partner-badge-header scroll-reveal">
-                <span class="partner-tag"><i class="fas fa-handshake"></i> Featured Partner Showcase</span>
-            </div>
-            <h2 class="section-title scroll-reveal">Projects by YNH</h2>
-            <div class="portfolio-grid">
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title reveal-text">About <span class="text-cyan">DevCraft</span></h2>
                 
-                <div class="portfolio-card glass scroll-reveal">
-                    <div class="portfolio-img-box">
-                        <img src="studybuddy-preview.png" alt="StudyBuddy AI Homepage Preview" class="project-img">
+                <div class="about-card glass scroll-reveal">
+                    <div class="about-header-badge">
+                        <i class="fas fa-sparkles"></i> Who We Are
                     </div>
+                    <p class="lead-text">
+                        At <strong class="highlight-text">DevCraft</strong>, we transform your ideas into modern, high-performance websites and custom web applications.
+                    </p>
+                    <p>
+                        Our goal is simple: help businesses, startups, and individuals build a strong, secure, and reliable online presence. We create websites that do more than just look good—they serve as powerful tools to showcase your brand, attract customers, and drive growth.
+                    </p>
 
-                    <h3>StudyBuddy AI</h3>
-                    <p class="portfolio-desc">AI-powered learning platform that generates instant quizzes, interactive flashcards, and step-by-step study assistance for students.</p>
-                    <div class="card-footer-box">
-                        <span class="badge badge-online"><i class="fas fa-circle-dot"></i> Online</span>
-                        <a href="https://studybuddy-e1fk.onrender.com" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+                    <div class="about-stats-grid">
+                        <div class="stat-box">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Custom Architecture</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">Lightning</span>
+                            <span class="stat-label">Fast Performance</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Scalable Reliability</span>
+                        </div>
                     </div>
                 </div>
-
             </div>
-        </div>
-    </section> -->
+        </section>
 
-    <section id="advertisement" class="ad-section">
-        <div class="container">
-            <div class="partner-badge-header scroll-reveal">
-                <span class="partner-tag ad-tag"><i class="fas fa-bullhorn"></i> Sponsored Businesses</span>
-            </div>
-            <h2 class="section-title scroll-reveal">Advertisement</h2>
-            <p class="ad-intro scroll-reveal">Discover trusted products, services, and brand partners endorsed by DevCraft.</p>
-
-            <div class="ad-grid">
-                <div class="ad-card glass scroll-reveal">
-                    <div class="portfolio-img-box carousel">
-                        <img src="images/afh-1.png" alt="Preview 1" class="project-img slide active">
-                        <img src="images/afh-2.png" alt="Preview 2" class="project-img slide">
-                        <img src="images/afh-3.png" alt="Preview 3" class="project-img slide">
-                        <img src="images/afh-4.png" alt="Preview 4" class="project-img slide">
-                        <img src="images/afh-5.png" alt="Preview 5" class="project-img slide">
-                        <img src="images/afh-6.png" alt="Preview 6" class="project-img slide">
-                        <img src="images/afh-7.png" alt="Preview 7" class="project-img slide">
-                        <img src="images/afh-8.png" alt="Preview 8" class="project-img slide">
-                        <img src="images/afh-9.png" alt="Preview 8" class="project-img slide">
-                        <img src="images/afh-10.png" alt="Preview 8" class="project-img slide">
-                        <img src="images/afh-11.png" alt="Preview 8" class="project-img slide">
-                        <img src="images/afh-12.png" alt="Preview 8" class="project-img slide">
-                        <img src="images/afh-13.png" alt="Preview 8" class="project-img slide">
-                        <img src="images/afh-14.png" alt="Preview 8" class="project-img slide">
-                        <img src="images/afh-15.png" alt="Preview 8" class="project-img slide">
-                    </div>
-                    <div class="ad-badge"><i class="fas fa-star"></i> Featured Ad</div>
-                    <h3>AFH COLLECTION</h3>
-                    <p class="ad-desc">AFH Collections is your premier online destination for premium imported fashion. We specialize in bringing you the latest trends directly from Turkey and China, offering a curated selection of elegant abayas, chic clothing, and high-quality bags and shoes.</p>
-                    <a href="https://wa.me/2349021713686" target="_blank" rel="noopener noreferrer" class="project-btn ad-btn">
-                        <i class="fab fa-whatsapp"></i> Contact Business
-                    </a>
+        <section id="who-we-serve" class="services-section">
+            <div class="container">
+                <h2 class="section-title reveal-text">Who We <span class="text-purple">Serve</span></h2>
+                
+                <div class="about-card glass scroll-reveal" style="margin-bottom: 40px; text-align: center;">
+                    <p class="lead-text">
+                        DevCraft is committed to helping <span class="text-cyan">small and growing organizations</span> establish a strong digital presence through thoughtfully designed, high-performance websites.
+                    </p>
+                    <p style="margin-bottom: 0;">
+                        By focusing closely on our clients, we provide personalized attention, practical technical solutions, and bespoke platforms tailored specifically to individual business goals.
+                    </p>
                 </div>
 
-                <div class="ad-card glass scroll-reveal">
-                    <div class="portfolio-img-box carousel">
-                        <img src="images/kaztal-1.png" alt="Preview 1" class="project-img slide active">
-                        <img src="images/kaztal-2.png" alt="Preview 2" class="project-img slide">
-                        <img src="images/kaztal-3.png" alt="Preview 3" class="project-img slide">
-                        <img src="images/kaztal-4.png" alt="Preview 4" class="project-img slide">
-                        <img src="images/kaztal-5.png" alt="Preview 5" class="project-img slide">
-                        <img src="images/kaztal-6.png" alt="Preview 6" class="project-img slide">
-                        <img src="images/kaztal-7.png" alt="Preview 7" class="project-img slide">
-                        <img src="images/kaztal-8.png" alt="Preview 8" class="project-img slide">
+                <h3 class="subsection-title scroll-reveal">We Primarily Work With:</h3>
+                
+                <div class="serve-cards-grid">
+                    <div class="serve-card glass scroll-reveal">
+                        <div class="serve-icon-wrapper"><i class="fas fa-store"></i></div>
+                        <h4>Small Businesses</h4>
+                        <p>Custom web platforms to establish digital authority and reach local customers.</p>
                     </div>
-                    <div class="ad-badge"><i class="fas fa-star"></i> Featured Ad</div>
-                    <h3>KAZTAL ACADEMY</h3>
-                    <p class="ad-desc">Kaztal Academy is an eminent, tech-driven institution located at Plot 9, Adeneye Adeowo Street, Ikorodu, Lagos. It offers a blended Montessori, Nigerian, and Arabic/Islamic curriculum. The school focuses on delivering a complete education that pairs academic excellence with high moral and Godly values.</p>
+                    <div class="serve-card glass scroll-reveal">
+                        <div class="serve-icon-wrapper"><i class="fas fa-utensils"></i></div>
+                        <h4>Restaurants & Cafés</h4>
+                        <p>Digital menus, online booking systems, and sleek interactive storefronts.</p>
+                    </div>
+                    <div class="serve-card glass scroll-reveal">
+                        <div class="serve-icon-wrapper"><i class="fas fa-building"></i></div>
+                        <h4>Real Estate Agents</h4>
+                        <p>Interactive property listings, virtual tours, and client lead generation portals.</p>
+                    </div>
+                    <div class="serve-card glass scroll-reveal">
+                        <div class="serve-icon-wrapper"><i class="fas fa-user-tie"></i></div>
+                        <h4>Personal Brands</h4>
+                        <p>High-converting portfolio platforms for creators, speakers, and professionals.</p>
+                    </div>
+                    <div class="serve-card glass scroll-reveal">
+                        <div class="serve-icon-wrapper"><i class="fas fa-shop"></i></div>
+                        <h4>Local Shops</h4>
+                        <p>E-commerce ordering channels built to transition retail shops into the modern web.</p>
+                    </div>
+                    <div class="serve-card glass scroll-reveal">
+                        <div class="serve-icon-wrapper"><i class="fas fa-briefcase"></i></div>
+                        <h4>Service Businesses</h4>
+                        <p>Appointment booking engines, client management systems, and service portals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="ad-actions">
-                        <a href="https://wa.me/2348167669761" target="_blank" rel="noopener noreferrer" class="project-btn ad-btn">
+        <section id="services" class="about-section">
+            <div class="container">
+                <h2 class="section-title scroll-reveal">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card glass scroll-reveal">
+                        <i class="fas fa-code service-icon"></i>
+                        <h3>Custom Web Development</h3>
+                        <p>Tailored front-to-back development designed exactly around your unique business requirements.</p>
+                    </div>
+                    <div class="service-card glass scroll-reveal">
+                        <i class="fas fa-laptop service-icon"></i>
+                        <h3>Business Websites</h3>
+                        <p>Corporate portals, landing pages, and commercial platforms built to scale and convert visitors.</p>
+                    </div>
+                    <div class="service-card glass scroll-reveal">
+                        <i class="fas fa-layer-group service-icon"></i>
+                        <h3>Web Applications</h3>
+                        <p>Interactive dashboard modules, school management systems, and specialized portal solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech" class="tech-section">
+            <div class="container">
+                <h2 class="section-title scroll-reveal">Tech Stack</h2>
+                <div class="tech-grid scroll-reveal">
+                    <div class="tech-badge">HTML5</div>
+                    <div class="tech-badge">CSS3</div>
+                    <div class="tech-badge">JavaScript</div>
+                    <div class="tech-badge">React</div>
+                    <div class="tech-badge">Node.js</div>
+                    <div class="tech-badge">Python</div>
+                    <div class="tech-badge">Responsive Design</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="our-projects" class="portfolio-section">
+            <div class="container">
+                <h2 class="section-title scroll-reveal">Our Projects</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-card glass scroll-reveal">
+                        <div class="portfolio-img-box">
+                            <img src="neomuseum-preview.png" alt="NeoMuseum AI Homepage Preview" class="project-img">
+                        </div>
+
+                        <h3>NeoMuseum</h3>
+                        <p class="portfolio-desc">NeoMuseum is an immersive digital space for art and education. Explore interactive virtual exhibits, share your own creations, and connect with a worldwide creative community.</p>
+                        <div class="card-footer-box">
+                            <span class="badge badge-online"><i class="fas fa-circle-dot"></i> Online</span>
+                            <a href="https://neomuseum.onrender.com" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card glass scroll-reveal">
+                        <div class="portfolio-img-box">
+                            <img src="studybuddy-preview.png" alt="StudyBuddy AI Homepage Preview" class="project-img">
+                        </div>
+
+                        <h3>StudyBuddy AI</h3>
+                        <p class="portfolio-desc">The ultimate AI study companion. Upload your notes to get instant practice quizzes, smart flashcards, and clear, step-by-step homework help exactly when you need it. Built by ByteHive.</p>
+                        <div class="card-footer-box">
+                            <span class="badge badge-online"><i class="fas fa-circle-dot"></i> Online</span>
+                            <a href="https://studybuddy-e1fk.onrender.com" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="advertisement" class="ad-section">
+            <div class="container">
+                <div class="partner-badge-header scroll-reveal">
+                    <span class="partner-tag ad-tag"><i class="fas fa-bullhorn"></i> Sponsored Businesses</span>
+                </div>
+                <h2 class="section-title scroll-reveal">Advertisement</h2>
+                <p class="ad-intro scroll-reveal">Discover trusted products, services, and brand partners endorsed by DevCraft.</p>
+
+                <div class="ad-grid">
+                    <div class="ad-card glass scroll-reveal">
+                        <div class="portfolio-img-box carousel">
+                            <img src="images/afh-1.png" alt="Preview 1" class="project-img slide active">
+                            <img src="images/afh-2.png" alt="Preview 2" class="project-img slide">
+                            <img src="images/afh-3.png" alt="Preview 3" class="project-img slide">
+                            <img src="images/afh-4.png" alt="Preview 4" class="project-img slide">
+                            <img src="images/afh-5.png" alt="Preview 5" class="project-img slide">
+                            <img src="images/afh-6.png" alt="Preview 6" class="project-img slide">
+                            <img src="images/afh-7.png" alt="Preview 7" class="project-img slide">
+                            <img src="images/afh-8.png" alt="Preview 8" class="project-img slide">
+                            <img src="images/afh-9.png" alt="Preview 8" class="project-img slide">
+                            <img src="images/afh-10.png" alt="Preview 8" class="project-img slide">
+                            <img src="images/afh-11.png" alt="Preview 8" class="project-img slide">
+                            <img src="images/afh-12.png" alt="Preview 8" class="project-img slide">
+                            <img src="images/afh-13.png" alt="Preview 8" class="project-img slide">
+                            <img src="images/afh-14.png" alt="Preview 8" class="project-img slide">
+                            <img src="images/afh-15.png" alt="Preview 8" class="project-img slide">
+                        </div>
+                        <div class="ad-badge"><i class="fas fa-star"></i> Featured Ad</div>
+                        <h3>AFH COLLECTION</h3>
+                        <p class="ad-desc">AFH Collections is your premier online destination for premium imported fashion. We specialize in bringing you the latest trends directly from Turkey and China, offering a curated selection of elegant abayas, chic clothing, and high-quality bags and shoes.</p>
+                        <a href="https://wa.me/2349021713686" target="_blank" rel="noopener noreferrer" class="project-btn ad-btn">
                             <i class="fab fa-whatsapp"></i> Contact Business
                         </a>
+                    </div>
 
-                        <a href="https://kaztalacademy.com" target="_blank" rel="noopener noreferrer" class="btn btn-gradient ad-btn">
-                            <i class="fas fa-external-link-alt"></i> Visit Site
+                    <div class="ad-card glass scroll-reveal">
+                        <div class="portfolio-img-box carousel">
+                            <img src="images/kaztal-1.png" alt="Preview 1" class="project-img slide active">
+                            <img src="images/kaztal-2.png" alt="Preview 2" class="project-img slide">
+                            <img src="images/kaztal-3.png" alt="Preview 3" class="project-img slide">
+                            <img src="images/kaztal-4.png" alt="Preview 4" class="project-img slide">
+                            <img src="images/kaztal-5.png" alt="Preview 5" class="project-img slide">
+                            <img src="images/kaztal-6.png" alt="Preview 6" class="project-img slide">
+                            <img src="images/kaztal-7.png" alt="Preview 7" class="project-img slide">
+                            <img src="images/kaztal-8.png" alt="Preview 8" class="project-img slide">
+                        </div>
+                        <div class="ad-badge"><i class="fas fa-star"></i> Featured Ad</div>
+                        <h3>KAZTAL ACADEMY</h3>
+                        <p class="ad-desc">Kaztal Academy is an eminent, tech-driven institution located at Plot 9, Adeneye Adeowo Street, Ikorodu, Lagos. It offers a blended Montessori, Nigerian, and Arabic/Islamic curriculum. The school focuses on delivering a complete education that pairs academic excellence with high moral and Godly values.</p>
+
+                        <div class="ad-actions">
+                            <a href="https://wa.me/2348167669761" target="_blank" rel="noopener noreferrer" class="project-btn ad-btn">
+                                <i class="fab fa-whatsapp"></i> Contact Business
+                            </a>
+
+                            <a href="https://kaztalacademy.com" target="_blank" rel="noopener noreferrer" class="btn btn-gradient ad-btn">
+                                <i class="fas fa-external-link-alt"></i> Visit Site
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="ad-card glass scroll-reveal">
+                        <div class="ad-badge"><i class="fas fa-bullseye"></i> Promote Here</div>
+                        <div class="ad-icon-box"><i class="fas fa-rectangle-ad"></i></div>
+                        <h3>Advertise Your Business</h3>
+                        <p class="ad-desc">Want your store, service, or personal brand featured on this page? Get in touch with us to place your ad here!</p>
+                        <a href="#contact" class="project-btn ad-btn">
+                            <i class="fas fa-paper-plane"></i> Place an Ad
                         </a>
                     </div>
                 </div>
-
-                <div class="ad-card glass scroll-reveal">
-                    <div class="ad-badge"><i class="fas fa-bullseye"></i> Promote Here</div>
-                    <div class="ad-icon-box"><i class="fas fa-rectangle-ad"></i></div>
-                    <h3>Advertise Your Business</h3>
-                    <p class="ad-desc">Want your store, service, or personal brand featured on this page? Get in touch with us to place your ad here!</p>
-                    <a href="#contact" class="project-btn ad-btn">
-                        <i class="fas fa-paper-plane"></i> Place an Ad
-                    </a>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title scroll-reveal">Get In Touch</h2>
-            <div class="dual-contact-wrapper">
-                
-                <div class="contact-info glass scroll-reveal">
-                    <h3 class="contact-card-title"><i class="fas fa-code"></i> Contact DevCraft</h3>
-                    <p class="contact-sub">Reach out directly to DevCraft for website builds & web apps.</p>
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title scroll-reveal">Get In Touch</h2>
+                <div class="dual-contact-wrapper">
                     
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>abdullahibashirgov@gmail.com</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+234 907 073 4425</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-location-dot"></i>
-                        <span>Nigeria</span>
-                    </div>
-                    
-                    <div class="contact-actions">
-                        <a href="mailto:abdullahibashirgov@gmail.com" class="action-btn email-btn"><i class="fas fa-envelope"></i> Email Us</a>
-                        <a href="https://wa.me/2349070734425" target="_blank" rel="noopener noreferrer" class="action-btn whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                    </div>
-
-                    <div class="donation-box">
-                        <h4><i class="fas fa-heart text-purple"></i> Support DevCraft</h4>
-                        <p>Help fuel our open-source tools and continuous development via <!-- Paystack or  --> direct bank transfer:</p>
+                    <div class="contact-info glass scroll-reveal">
+                        <h3 class="contact-card-title"><i class="fas fa-code"></i> Contact DevCraft</h3>
+                        <p class="contact-sub">Reach out directly to DevCraft for website builds & web apps.</p>
                         
-                        <!-- <button type="button" onclick="payWithPaystack()" class="action-btn paystack-btn">
-                            <i class="fas fa-credit-card"></i> Donate via Paystack
-                        </button> -->
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>abdullahibashirgov@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+234 912 337 5368</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-location-dot"></i>
+                            <span>Nigeria</span>
+                        </div>
+                        
+                        <div class="contact-actions">
+                            <a href="mailto:abdullahibashirgov@gmail.com" class="action-btn email-btn"><i class="fas fa-envelope"></i> Email Us</a>
+                            <a href="https://wa.me/2349123375368" target="_blank" rel="noopener noreferrer" class="action-btn whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        </div>
 
-                        <div class="account-details" style="margin-top: 15px;">
-                            <p><strong>Bank:</strong> OPAY</p>
-                            <p><strong>Account Number:</strong> 9070734425</p>
-                            <p><strong>Account Name:</strong> ABDULLAHI BASHIR TIWALOLUWA</p>
+                        <div class="donation-box">
+                            <h4><i class="fas fa-heart text-purple"></i> Support DevCraft</h4>
+                            <p>Help fuel our open-source tools and continuous development via Paystack or direct bank transfer:</p>
+                            
+                            <!-- <button type="button" onclick="payWithPaystack()" class="action-btn paystack-btn">
+                                <i class="fas fa-credit-card"></i> Donate via Paystack
+                            </button> -->
+
+                            <div class="account-details" style="margin-top: 15px;">
+                                <p><strong>Bank:</strong> OPAY</p>
+                                <p><strong>Account Number:</strong> 9070734425</p>
+                                <p><strong>Account Name:</strong> ABDULLAHI BASHIR TIWALOLUWA</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="contact-info glass highlight-ynh scroll-reveal">
-                    <h3 class="contact-card-title text-cyan"><i class="fas fa-rocket"></i> Contact YNH</h3>
-                    <p class="contact-sub">Connect with YNH directly for creative collaborations & inquiries.</p>
-                    
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>olamilekanyussuf612@gmail.com</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+234 911 629 3503</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-location-dot"></i>
-                        <span>Nigeria</span>
-                    </div>
+                    <div class="contact-info glass highlight-bytehive scroll-reveal">
+                        <h3 class="contact-card-title text-cyan"><i class="fas fa-rocket"></i> Contact ByteHive</h3>
+                        <p class="contact-sub">Connect with ByteHive directly for creative collaborations & inquiries.</p>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>olamilekanyussuf612@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+234 911 629 3503</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-location-dot"></i>
+                            <span>Nigeria</span>
+                        </div>
 
-                    <div class="contact-actions">
-                        <a href="mailto:olamilekanyussuf612@gmail.com" class="action-btn email-btn"><i class="fas fa-envelope"></i> Email YNH</a>
-                        <a href="https://wa.me/2349116293503" target="_blank" rel="noopener noreferrer" class="action-btn whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp YNH</a>
-                    </div>
+                        <div class="contact-actions">
+                            <a href="mailto:olamilekanyussuf612@gmail.com" class="action-btn email-btn"><i class="fas fa-envelope"></i> Email ByteHive</a>
+                            <a href="https://wa.me/2349116293503" target="_blank" rel="noopener noreferrer" class="action-btn whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp ByteHive</a>
+                        </div>
 
-                    <div class="donation-box bank-box">
-                        <h4><i class="fas fa-building-columns text-cyan"></i> Support YNH directly</h4>
-                        <p>You can support YNH via direct bank transfer:</p>
-                        <div class="account-details">
-                            <p><strong>Bank:</strong> Opay</p>
-                            <p><strong>Account Number:</strong> 9070734425</p>
-                            <p><strong>Account Name:</strong> ABDULLAHI BASHIR TIWALOLUWA</p>
+                        <div class="donation-box bank-box">
+                            <h4><i class="fas fa-building-columns text-cyan"></i> Support ByteHive directly</h4>
+                            <p>You can support ByteHive via direct bank transfer:</p>
+                            <div class="account-details">
+                                <p><strong>Bank:</strong> Opay</p>
+                                <p><strong>Account Number:</strong> 9070734425</p>
+                                <p><strong>Account Name:</strong> ABDULLAHI BASHIR TIWALOLUWA</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="funding" class="funding-section">
-        <div class="container">
-            <h2 class="section-title scroll-reveal"><i class="fas fa-hand-holding-dollar text-cyan"></i> Community Funding Goal</h2>
-            
-            <div class="funding-card glass scroll-reveal">
+        <section id="funding" class="funding-section">
+            <div class="container">
+                <h2 class="section-title scroll-reveal"><i class="fas fa-hand-holding-dollar text-cyan"></i> Community Funding Goal</h2>
                 
-                <div class="funding-header">
-                    <div class="funding-target-box">
-                        <span class="funding-label">Target Goal</span>
-                        <span class="funding-amount">₦20,000</span>
+                <div class="funding-card glass scroll-reveal">
+                    
+                    <div class="funding-header">
+                        <div class="funding-target-box">
+                            <span class="funding-label">Target Goal</span>
+                            <span class="funding-amount">₦20,000</span>
+                        </div>
+                        <div class="funding-raised-box">
+                            <span class="funding-label">Total Raised</span>
+                            <span class="funding-amount text-cyan">₦0</span>
+                        </div>
                     </div>
-                    <div class="funding-raised-box">
-                        <span class="funding-label">Total Raised</span>
-                        <span class="funding-amount text-cyan">₦0</span>
+
+                    <div class="funding-progress-wrapper">
+
+                        <div class="funding-progress-bar">
+                            <!-- <div class="progress-segment bg-green" style="width: 25%;">
+                                <span class="segment-text">Abdullahi 25%</span>
+                            </div> -->
+                        </div>
+
+                        <div class="progress-labels">
+                            <span>₦0</span>
+                            <span>₦10,000</span>
+                            <span>₦20,000 Goal</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="funding-progress-wrapper">
+                    <h3 class="donors-title"><i class="fas fa-heart text-purple"></i> Supporters & Donors</h3>
+                    
+                    <div class="donors-grid">
 
-                    <div class="funding-progress-bar">
-                        <!-- <div class="progress-segment bg-green" style="width: %;">
-                            <span class="segment-text">Sponsor Name (%)</span>
+                        <!-- <div class="donor-card">
+                            <div class="donor-color-dot green-dot"></div>
+                            <div class="donor-info">
+                                <span class="donor-name">Abdullahi</span>
+                                <span class="donor-amount">₦5000</span>
+                            </div>
                         </div> -->
+                        
+                        <p class="no-donors-text" id="no-donors-msg">Be the first to support this campaign!</p>
+
                     </div>
 
-                    <div class="progress-labels">
-                        <span>₦0</span>
-                        <span>₦10,000</span>
-                        <span>₦20,000 Goal</span>
-                    </div>
                 </div>
+            </div>
+        </section>
+    </main>
 
-                <h3 class="donors-title"><i class="fas fa-heart text-purple"></i> Supporters & Donors</h3>
-                
-                <div class="donors-grid">
-
-                    <!-- <div class="donor-card">
-                        <div class="donor-color-dot green-dot"></div>
-                        <div class="donor-info">
-                            <span class="donor-name">Sponsor Name</span>
-                            <span class="donor-amount">₦Amount contributed</span>
-                        </div>
-                    </div> -->
-                    
-                    <p class="no-donors-text" id="no-donors-msg">Be the first to support this campaign!</p>
-
-                </div>
-
+    <div id="custom-modal" class="modal-overlay">
+        <div class="modal-card glass">
+            <div class="modal-header">
+                <h3 id="modal-title"><i class="fas fa-check-circle text-purple"></i> Notification</h3>
+                <button class="modal-close" id="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="modal-message">Your action was successful!</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="modal-ok-btn">OK</button>
             </div>
         </div>
-    </section>
+    </div>
+
+    <div id="payment-input-modal" class="modal-overlay">
+        <div class="modal-card glass">
+            <div class="modal-header">
+                <h3><i class="fas fa-hand-holding-usd text-purple"></i> Support Campaign</h3>
+                <button class="modal-close" onclick="closePaymentModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div style="margin-bottom: 14px;">
+                    <label style="display:block; font-size: 0.85rem; margin-bottom: 6px; color: var(--text-muted);">Your Email Address</label>
+                    <input type="email" id="donor-email" placeholder="email@example.com" style="width:100%; padding: 10px; border-radius: 8px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.05); color: #fff;">
+                </div>
+                <div style="margin-bottom: 16px;">
+                    <label style="display:block; font-size: 0.85rem; margin-bottom: 6px; color: var(--text-muted);">Amount in Naira (Minimum ₦5,000)</label>
+                    <input type="number" id="donor-amount" min="5000" placeholder="5000" style="width:100%; padding: 10px; border-radius: 8px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.05); color: #fff;">
+                </div>
+                <p id="payment-error-msg" style="color: #ef4444; font-size: 0.85rem; display: none; margin-bottom: 12px;"></p>
+            </div>
+            <div class="modal-footer" style="display:flex; gap: 10px; justify-content: flex-end;">
+                <button class="btn" onclick="closePaymentModal()" style="background: rgba(255,255,255,0.1);">Cancel</button>
+                <button class="btn btn-primary" onclick="proceedToPaystack()">Proceed to Payment</button>
+            </div>
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; 2026 DevCraft | <!-- Featuring Projects by YNH. --> All rights reserved.</p>
+        <img src="logo.png" alt="DevCraft Logo" class="footer-logo">
+        <p>&copy; 2026 DevCraft | In collaboration with ByteHive | All rights reserved.</p>
         <p class="footer-sub">Built with HTML, CSS & JavaScript.</p>
     </footer>
 

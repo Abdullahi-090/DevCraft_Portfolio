@@ -102,22 +102,84 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ==========================================
+// CUSTOM MODAL FUNCTION
+// ==========================================
+function showModal(title, message) {
+    const modal = document.getElementById('custom-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalMessage = document.getElementById('modal-message');
+    const closeBtn = document.getElementById('modal-close-btn');
+    const okBtn = document.getElementById('modal-ok-btn');
+
+    if (!modal) return;
+
+    modalTitle.innerHTML = title;
+    modalMessage.textContent = message;
+    modal.classList.add('active');
+
+    const closeModal = () => modal.classList.remove('active');
+
+    closeBtn.onclick = closeModal;
+    okBtn.onclick = closeModal;
+}
+
+// ==========================================
 // 4. PAYSTACK PAYMENT INTEGRATION
 // ==========================================
+
+// Triggered when user clicks "Support Campaign" button
 function payWithPaystack() {
+    const paymentModal = document.getElementById('payment-input-modal');
+    const errorMsg = document.getElementById('payment-error-msg');
+    
+    if (errorMsg) errorMsg.style.display = 'none';
+    if (paymentModal) paymentModal.classList.add('active');
+}
+
+function closePaymentModal() {
+    const paymentModal = document.getElementById('payment-input-modal');
+    if (paymentModal) paymentModal.classList.remove('active');
+}
+
+function proceedToPaystack() {
+    const emailInput = document.getElementById('donor-email').value.trim();
+    const amountInput = parseFloat(document.getElementById('donor-amount').value);
+    const errorMsg = document.getElementById('payment-error-msg');
+
+    // Email validation
+    if (!emailInput || !emailInput.includes('@') || !emailInput.includes('.')) {
+        errorMsg.textContent = 'Please enter a valid email address.';
+        errorMsg.style.display = 'block';
+        return;
+    }
+
+    // Minimum N5,000 validation
+    if (isNaN(amountInput) || amountInput < 5000) {
+        errorMsg.textContent = 'Minimum contribution amount is ₦5,000.';
+        errorMsg.style.display = 'block';
+        return;
+    }
+
+    // Hide input modal before opening Paystack iframe
+    closePaymentModal();
+
+    // Convert Naira to Kobo (multiply by 100)
+    const amountInKobo = amountInput * 100;
+
     let handler = PaystackPop.setup({
-        key: 'pk_test_xxxxxxxxxxxxxxxxxxxxxxxx', 
-        email: 'abdullahibashirgov@gmail.com',
-        amount: 500000, 
+        key: 'pk_test_b3450cd7031a6699fad0e30733063be6fd4da301', 
+        email: emailInput,
+        amount: amountInKobo, 
         currency: "NGN",
         ref: 'DC_' + Math.floor((Math.random() * 1000000000) + 1),
         onClose: function() {
-            alert('Payment window closed.');
+            showModal('<i class="fas fa-info-circle text-yellow"></i> Notice', 'Payment window was closed.');
         },
         callback: function(response) {
-            alert('Thank you for supporting DevCraft! Reference: ' + response.reference);
+            showModal('<i class="fas fa-check-circle text-green"></i> Thank You!', 'Thank you for your ₦' + amountInput.toLocaleString() + ' contribution! Reference: ' + response.reference);
         }
     });
+
     handler.openIframe();
 }
 
